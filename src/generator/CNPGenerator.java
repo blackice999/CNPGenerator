@@ -101,7 +101,7 @@ public class CNPGenerator implements Generator {
     }
 
     private boolean countyCodeInvalid(int countyCode) {
-        return Arrays.stream(Counties.COUNTIES).anyMatch(i -> i != countyCode);
+        return Arrays.stream(Counties.COUNTIES).noneMatch(i -> i == countyCode);
     }
 
     private void verifyIfSexInvalid(int sex) {
